@@ -20,6 +20,11 @@ public class Item : ScriptableObject
         return false;
     }
 
+    public virtual void UseItem()
+    {
+        Debug.Log("Using " + name);
+    }
+
 }
 
 
