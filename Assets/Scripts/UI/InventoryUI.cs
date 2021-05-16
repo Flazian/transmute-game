@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.EventSystems;
 
 public class InventoryUI : MonoBehaviour
 {
     public Transform itemParent;
     public GameObject inventoryUI;
-    [SerializeField] private InputAction invPress = new InputAction(binding: "<Keyboard>/i");
+    private InputAction invPress = new InputAction(binding: "<Keyboard>/i");
 
     Inventory inventory;
 
