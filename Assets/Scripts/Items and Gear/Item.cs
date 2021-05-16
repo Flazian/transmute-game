@@ -8,13 +8,13 @@ public class Item : ScriptableObject
     public Sprite icon = null;
     public bool defaultItem = false;
 
-    public List<itemId> itemIds = new List<itemId>();
+    public List<itemType> itemTypes = new List<itemType>();
 
-    public bool hasType(itemId _id)
+    public bool hasType(itemType _id)
     {
-        for (int i = 0; i < itemIds.Count; i++)
+        for (int i = 0; i < itemTypes.Count; i++)
         {
-            if (_id == itemIds[i]) return true;
+            if (_id == itemTypes[i]) return true;
         }
 
         return false;
@@ -29,9 +29,7 @@ public class Item : ScriptableObject
 
 
 
-public enum itemId
+public enum itemType
 {
-    sword,
-    helmet,
-    mainhand
+    Helm, Chest, Gloves, Legs, Boots, Ring, MainHand, OffHand, TwoHand, Potion
 }

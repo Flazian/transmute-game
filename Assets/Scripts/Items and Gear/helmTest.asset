@@ -9,10 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1aea3b60fd75934d9f1a040b222261d, type: 3}
-  m_Name: gloveTest
+  m_Script: {fileID: 11500000, guid: 23c13ae71658abc47be37762ff2f79c6, type: 3}
+  m_Name: helmTest
   m_EditorClassIdentifier: 
-  name: glove
-  icon: {fileID: 21300000, guid: 6145fed5b5398a14b9c3c476003f9eba, type: 3}
+  name: helmTest
+  icon: {fileID: 21300000, guid: ffbd15f634757b24fa5ca031dd4965a8, type: 3}
   defaultItem: 0
-  itemIds: 
+  itemTypes: 00000000
+  armor: 5
+  dmg: 0
