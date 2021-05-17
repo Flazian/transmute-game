@@ -10,69 +10,87 @@ public class GearManager : MonoBehaviour
 
     public int numGearSlots = 8;
 
-    public GameObject canvas;
+    public Transmutation transmute;
 
     private InputAction unequipAllButton = new InputAction(binding: "<Keyboard>/u");
+
+
+    [SerializeField] ItemStack[] currentGear;
+
+    public delegate void OnGearChanged(ItemStack newGear, ItemStack oldGear);
+    public OnGearChanged onGearChanged;
+
+    Inventory inventory;
 
     private void Awake()
     {
         instance = this;
     }
 
-    [SerializeField] Gear[] currentGear;
-
-    public delegate void OnGearChanged(Gear newGear, Gear oldGear);
-    public OnGearChanged onGearChanged;
-
-    Inventory inventory;
-
     private void Start()
     {
         inventory = Inventory.instance;
-        currentGear = new Gear[numGearSlots];
+        currentGear = new ItemStack[numGearSlots];
         unequipAllButton.Enable();
     }
 
-    public void Equip(Gear newGear)
+    public void Equip(ItemStack newGear)
     {
         int slotIndex = 0;
-        int slotIndex2 = 0;
-        int chosenSlot = 0;
-        Gear oldGear = null;
+        ItemStack oldGear = null;
 
-        if ( newGear.itemTypes.Count == 1)
-        {
-            slotIndex = (int)newGear.itemTypes[0];
-        }
-        else if (newGear.itemTypes.Count >= 2)
+        slotIndex = (int)newGear.GetItemType();
+            
+        /*else if (newGear.itemTypes.Count == 2)
         {
             slotIndex = (int)newGear.itemTypes[0];
             slotIndex2 = (int)newGear.itemTypes[1];
-        }
+            transmute.transmute(slotIndex, slotIndex2);
+            
+            if (transmute.choice == 1)
+            {
+                
+                chosenSlot = slotIndex;
+            }
+            else if (transmute.choice == 2)
+            {
+                
+                chosenSlot = slotIndex2;
+            }
+        } */
 
+
+
+        
         //change this to chosen slot
-        if (currentGear[slotIndex] != null)
-        {
-            oldGear = currentGear[slotIndex];
-            inventory.Add(oldGear);
-        }
+         if (currentGear[slotIndex].baseItem != null)
+         {
+             oldGear = currentGear[slotIndex];
+             inventory.Add(oldGear);
+         }
 
-        if (onGearChanged != null)
-        {
-            onGearChanged.Invoke(newGear, oldGear);
-        }
+         if (onGearChanged != null)
+         {
+             onGearChanged.Invoke(newGear, oldGear);
+         }
 
-        //change this to chosen slot
-        currentGear[slotIndex] = newGear;
+         //change this to chosen slot
+         currentGear[slotIndex] = newGear;
+         
+    }
+
+    IEnumerator waitToChangeGear()
+    {
+        yield return new WaitUntil(() => transmute.choiceMade == true);
     }
 
 
     //this might need to be chosenslot but idk
     public void Unequip(int slotIndex)
     {
-        if (currentGear[slotIndex] != null)
+        if (currentGear[slotIndex].baseItem != null)
         {
-            Gear oldGear = currentGear[slotIndex];
+            ItemStack oldGear = currentGear[slotIndex];
             inventory.Add(oldGear);
 
             currentGear[slotIndex] = null;

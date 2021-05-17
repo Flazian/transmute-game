@@ -22,9 +22,9 @@ public class Inventory : MonoBehaviour
 
     public int invSpace = 15;
 
-    public List<Item> items = new List<Item>();
+    public List<ItemStack> items = new List<ItemStack>();
 
-    public bool Add (Item item)
+    public bool Add(ItemStack item)
     {
         if (!item.defaultItem)
         {
@@ -44,7 +44,7 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    public void Remove(Item item)
+    public void Remove(ItemStack item)
     {
         items.Remove(item);
         if (whenItemChangedCallback != null)

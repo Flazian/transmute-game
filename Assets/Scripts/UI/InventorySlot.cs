@@ -5,12 +5,13 @@ public class InventorySlot : MonoBehaviour
 {
     public Image icon;
     public Button removeButton;
-    Item item;
+    ItemStack item;
     
-    public void AddItem(Item newItem)
+    public void AddItem(ItemStack newItem)
     {
+        if (newItem.baseItem == null) return;
         item = newItem;
-        icon.sprite = item.icon;
+        icon.sprite = item.baseItem.icon;
         icon.enabled = true;
         removeButton.interactable = true;
     }

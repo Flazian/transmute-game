@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class ItemPickup : Interact
 {
-    public Item item;
+    public ItemStack item;
 
     public override void use()
     {
@@ -17,7 +17,7 @@ public class ItemPickup : Interact
 
     void PickUp()
     {
-        Debug.Log("Picking up " + item.name);
+        Debug.Log("Picking up " + item.baseItem.name);
         bool pickedUp = Inventory.instance.Add(item);
         if (pickedUp)
         {
