@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class GearManager : MonoBehaviour
 {
     //singleton
-    public static GearManager instance;
+    public static GearManager Instance;
 
     public int numGearSlots = 8;
 
@@ -24,23 +24,41 @@ public class GearManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Start()
     {
         inventory = Inventory.instance;
         currentGear = new ItemStack[numGearSlots];
+        InitializeGear();
         unequipAllButton.Enable();
+    }
+
+    private void InitializeGear()
+    {
+        for (int i = 0; i < currentGear.Length; i++)
+        {
+            currentGear[i] = new ItemStack();
+        }
     }
 
     public void Equip(ItemStack newGear)
     {
         int slotIndex = 0;
         ItemStack oldGear = null;
-
+        
         slotIndex = (int)newGear.GetItemType();
-            
+
+        #region
         /*else if (newGear.itemTypes.Count == 2)
         {
             slotIndex = (int)newGear.itemTypes[0];
@@ -58,12 +76,11 @@ public class GearManager : MonoBehaviour
                 chosenSlot = slotIndex2;
             }
         } */
+        #endregion
 
-
-
-        
         //change this to chosen slot
-         if (currentGear[slotIndex].baseItem != null)
+        // this breask everything!
+        if (currentGear[slotIndex].baseItem != null)
          {
              oldGear = currentGear[slotIndex];
              inventory.Add(oldGear);

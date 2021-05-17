@@ -161,7 +161,7 @@ public class Transmutation : MonoBehaviour
 
         lastTransmuted.overrideType = lastTransmuted.GetItemTypes()[_choice-1];
 
-        GearManager.instance.Equip(lastTransmuted);
+        GearManager.Instance.Equip(lastTransmuted);
         lastTransmuted.InventoryRemove();
     }
 

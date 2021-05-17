@@ -27,10 +27,11 @@ public class ItemStack
     public void UseItem()
     {
         Debug.Log($"Using item: {baseItem.name}");
+        if (baseItem == null) return;
 
         if (baseItem.itemTypes.Count == 1 || overrideType != itemType.Null)
         {
-            GearManager.instance.Equip(this);
+            GearManager.Instance.Equip(this);
             InventoryRemove();
         }
         else
