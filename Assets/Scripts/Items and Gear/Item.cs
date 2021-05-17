@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [CreateAssetMenu(fileName = "item", menuName = "Inventory/Item")]
 public class Item : ScriptableObject
 {
@@ -23,6 +24,11 @@ public class Item : ScriptableObject
     public virtual void UseItem()
     {
         Debug.Log("Using " + name);
+    }
+
+    public void InventoryRemove()
+    {
+        Inventory.instance.Remove(this);
     }
 
 }

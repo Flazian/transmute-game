@@ -14,9 +14,8 @@ public class Gear : Item
     {
         base.UseItem();
         GearManager.instance.Equip(this);
-        //if two types create popup
-        //equip
-        //remove from inv
+
+        InventoryRemove();
     }
 
 }
