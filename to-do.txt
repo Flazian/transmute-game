@@ -1,0 +1,24 @@
+to-do list
+
+gearmanager + equip to slots
+gear ui
+gear unequip
+
+transmute mechanic/functions + type handling
+transmute ui
+transmute items - x slot does y thing
+
+enemy
+enemy ai
+enemy death + item drop
+run-time loot drops/scriptable obj - BIG
+
+combat
+enemy targeting
+dmg instances
+gear modifiers
+
+more:
+environments
+spawns
+procuderal generation
