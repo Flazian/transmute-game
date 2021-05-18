@@ -93,7 +93,9 @@ public class Transmutation : MonoBehaviour
             case 8:
                 //apply when two hand image created
                 break;
-            
+
+            default:
+                break;
 
         }
 
@@ -135,7 +137,8 @@ public class Transmutation : MonoBehaviour
                 //apply when two hand image created
                 break;
 
-
+            default:
+                break;
         }
 
         //image1.GetComponent<Image>().sprite = 

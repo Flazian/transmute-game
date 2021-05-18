@@ -1,11 +1,11 @@
 to-do list
 
-gearmanager + equip to slots
+gearmanager + equip to slots X
 gear ui
 gear unequip
 
-transmute mechanic/functions + type handling
-transmute ui
+transmute mechanic/functions + type handling X
+transmute ui X
 transmute items - x slot does y thing
 
 enemy

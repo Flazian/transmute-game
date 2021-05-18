@@ -13,14 +13,25 @@ public class GearManager : MonoBehaviour
     public Transmutation transmute;
 
     private InputAction unequipAllButton = new InputAction(binding: "<Keyboard>/u");
+    
 
-
-    [SerializeField] ItemStack[] currentGear;
+    [SerializeField] public ItemStack[] currentGear;
 
     public delegate void OnGearChanged(ItemStack newGear, ItemStack oldGear);
     public OnGearChanged onGearChanged;
 
     Inventory inventory;
+
+    public Sprite helm;
+    public Sprite chest;
+    public Sprite gloves;
+    public Sprite legs;
+    public Sprite boots;
+    public Sprite ring;
+    public Sprite mainHand;
+    public Sprite offHand;
+
+
 
     private void Awake()
     {
@@ -96,12 +107,6 @@ public class GearManager : MonoBehaviour
          
     }
 
-    IEnumerator waitToChangeGear()
-    {
-        yield return new WaitUntil(() => transmute.choiceMade == true);
-    }
-
-
     //this might need to be chosenslot but idk
     public void Unequip(int slotIndex)
     {
@@ -110,7 +115,7 @@ public class GearManager : MonoBehaviour
             ItemStack oldGear = currentGear[slotIndex];
             inventory.Add(oldGear);
 
-            currentGear[slotIndex] = null;
+            currentGear[slotIndex] = new ItemStack();
 
             if (onGearChanged != null)
             {
