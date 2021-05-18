@@ -1,8 +1,8 @@
 to-do list
 
 gearmanager + equip to slots X
-gear ui
-gear unequip
+gear ui X
+gear unequip X
 
 transmute mechanic/functions + type handling X
 transmute ui X
@@ -22,3 +22,4 @@ more:
 environments
 spawns
 procuderal generation
+stats
