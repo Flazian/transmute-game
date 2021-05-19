@@ -3558,6 +3558,7 @@ GameObject:
   - component: {fileID: 1206215853}
   - component: {fileID: 1206215855}
   - component: {fileID: 1206215854}
+  - component: {fileID: 1206215856}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3723,6 +3724,24 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1206215856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206215848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8159b0c688769a948ae8ec6b19f9450b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth:
+    baseValue: 0
+  damage:
+    baseValue: 1
+  armour:
+    baseValue: 0
 --- !u!224 &1214376011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5707076460489155357, guid: 1d7cadda276737f48a59846285629a80,
@@ -4470,7 +4489,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b018035ae2657e74ead890277cef6054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gearParent: {fileID: 1517939881}
   gearUI: {fileID: 539075499}
 --- !u!114 &1524651624
 MonoBehaviour:

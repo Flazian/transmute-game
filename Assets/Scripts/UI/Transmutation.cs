@@ -53,8 +53,6 @@ public class Transmutation : MonoBehaviour
 
     public void transmute(int index1, int index2, ItemStack _gear)
     {
-        Debug.Log(index1);
-        Debug.Log(index2);
         switch(index1)
         {
             case 0:
@@ -67,7 +65,6 @@ public class Transmutation : MonoBehaviour
 
             case 2:
                 setImage1(gloves);
-                Debug.Log("called");
                 break;
 
             case 3:

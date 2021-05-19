@@ -63,8 +63,6 @@ namespace TR.ARPGInput
 
                 if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                     Debug.Log(EventSystem.current.IsPointerOverGameObject());
-                     Debug.Log("hit world");
 
                      if (Physics.Raycast(ray, out hit, 100, layerMaskInteract))
                      {

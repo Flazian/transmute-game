@@ -36,7 +36,6 @@ public class ItemStack
         }
         else
         {
-            //Debug.Log(Transmutation.instance);
             Transmutation.instance.transmute((int)baseItem.itemTypes[0], (int)baseItem.itemTypes[1], this);
         }
 
