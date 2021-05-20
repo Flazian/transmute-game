@@ -3733,15 +3733,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1206215848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8159b0c688769a948ae8ec6b19f9450b, type: 3}
+  m_Script: {fileID: 11500000, guid: fe231b0bdf6183945a03c83ba2d549a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth:
     baseValue: 0
+    modifiers: 
   damage:
-    baseValue: 1
+    baseValue: 0
+    modifiers: 
   armour:
     baseValue: 0
+    modifiers: 
 --- !u!224 &1214376011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5707076460489155357, guid: 1d7cadda276737f48a59846285629a80,

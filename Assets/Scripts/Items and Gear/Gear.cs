@@ -5,8 +5,40 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Equip", menuName = "Inventory/Gear")]
 public class Gear : Item
 {
-    public int armor;
-    public int dmg;
+    private int defaultArmour;
+    private int defaultDamage;
+
+    public int armour;
+    public int damage;
+
+    //these overrides are from a redudant system, might keep for future use
+    #region
+    public override void setArmour()
+    {
+        defaultArmour = armour;
+        base.setArmour();
+        armour = armour2;
+    }
+
+    public override void setDamage()
+    {
+        defaultDamage = damage;
+        base.setDamage();
+        damage = damage2;
+    }
+
+    public override void resetToDefaultMods()
+    {
+        base.resetToDefaultMods();
+        damage = defaultDamage;
+        armour = defaultArmour;
+    }
+    #endregion
+
+    public int armour2;
+    public int damage2;
+
+
 }
 
 [System.Serializable]

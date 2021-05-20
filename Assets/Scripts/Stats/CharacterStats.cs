@@ -28,7 +28,7 @@ public class CharacterStats : MonoBehaviour
     {
         if (testDmg.triggered)
         {
-            takeDmg(120);
+            takeDmg(100);
         }
     }
 

@@ -161,6 +161,21 @@ public class Transmutation : MonoBehaviour
 
         lastTransmuted.overrideType = lastTransmuted.GetItemTypes()[_choice-1];
 
+        #region
+        //redundant
+        /*if (choice == 2)
+        {
+            lastTransmuted.baseItem.setArmour();
+            lastTransmuted.baseItem.setDamage();
+        }
+        else if (choice == 1 && lastTransmuted.overrideType == lastTransmuted.GetItemTypes()[0])
+        {
+            Debug.Log("RESET SETERTSET");
+            lastTransmuted.baseItem.resetToDefaultMods();
+        }*/
+
+        #endregion
+
         GearManager.Instance.Equip(lastTransmuted);
         lastTransmuted.InventoryRemove();
     }

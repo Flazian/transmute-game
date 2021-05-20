@@ -65,7 +65,7 @@ public class GearManager : MonoBehaviour
     public void Equip(ItemStack newGear)
     {
         int slotIndex = 0;
-        ItemStack oldGear = null;
+        ItemStack oldGear = new ItemStack();
         
         slotIndex = (int)newGear.GetItemType();
 
@@ -119,7 +119,7 @@ public class GearManager : MonoBehaviour
 
             if (onGearChanged != null)
             {
-                onGearChanged.Invoke(null, oldGear);
+                onGearChanged.Invoke(new ItemStack(), oldGear);
             }
 
         }
