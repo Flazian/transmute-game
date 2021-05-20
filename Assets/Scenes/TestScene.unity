@@ -1691,6 +1691,7 @@ MonoBehaviour:
   pickUpRadius: 3
   interactTransform: {fileID: 327652366}
   item:
+    tier: 0
     baseItem: {fileID: 11400000, guid: c7935ef0c481ca243b3b469c2ca770a6, type: 2}
     defaultItem: 0
     overrideType: 10
@@ -2986,7 +2987,8 @@ MonoBehaviour:
   pickUpRadius: 3
   interactTransform: {fileID: 927332273}
   item:
-    baseItem: {fileID: 11400000, guid: 8caeb2a6019dc794a9ee8b08cbc30d4c, type: 2}
+    tier: 0
+    baseItem: {fileID: 11400000, guid: 81e73d799ecb48949b57f12126ce3821, type: 2}
     defaultItem: 0
     overrideType: 10
 --- !u!23 &927332271
@@ -4751,6 +4753,7 @@ MonoBehaviour:
   mainHand: {fileID: 21300000, guid: b3b0602a41961df48b0a218be6573831, type: 3}
   offHand: {fileID: 21300000, guid: e74f6eb9b90ad8946804976c1a116f26, type: 3}
   lastTransmuted:
+    tier: 0
     baseItem: {fileID: 0}
     defaultItem: 0
     overrideType: 10
@@ -4946,7 +4949,8 @@ MonoBehaviour:
   pickUpRadius: 3
   interactTransform: {fileID: 1586974702}
   item:
-    baseItem: {fileID: 11400000, guid: e6067fe6944ba2446a2b4caabbaad64f, type: 2}
+    tier: 2
+    baseItem: {fileID: 11400000, guid: 0c2351b6c51b6514aa392e6f2c6f79b0, type: 2}
     defaultItem: 0
     overrideType: 10
 --- !u!1001 &1610719954
@@ -6277,7 +6281,8 @@ MonoBehaviour:
   pickUpRadius: 3
   interactTransform: {fileID: 2078583677}
   item:
-    baseItem: {fileID: 11400000, guid: 8caeb2a6019dc794a9ee8b08cbc30d4c, type: 2}
+    tier: 0
+    baseItem: {fileID: 11400000, guid: b18f1ff48adf12941a3982b003948b72, type: 2}
     defaultItem: 0
     overrideType: 10
 --- !u!23 &2078583675

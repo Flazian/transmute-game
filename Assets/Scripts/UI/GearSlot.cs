@@ -49,7 +49,7 @@ public class GearSlot : MonoBehaviour
     private void slotImage()
     {
         Sprite newIcon;
-        newIcon = gearManager.currentGear[gearSlot].baseItem.icon;
+        newIcon = gearManager.currentGear[gearSlot].GetSprite();
         icon.sprite = newIcon;
         var tempColor = icon.color;
         tempColor.a = 1f;

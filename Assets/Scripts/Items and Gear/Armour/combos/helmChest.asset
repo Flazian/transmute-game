@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c13ae71658abc47be37762ff2f79c6, type: 3}
+  m_Name: helmChest
+  m_EditorClassIdentifier: 
+  name: Morphing Steel
+  icon: {fileID: 21300000, guid: f2ab5f69bc5571a4a916318eefb278ed, type: 3}
+  transmute1: {fileID: 21300000, guid: ffbd15f634757b24fa5ca031dd4965a8, type: 3}
+  transmute2: {fileID: 21300000, guid: bb7506527efe34349af6c15e295e4c18, type: 3}
+  defaultItem: 0
+  itemTypes: 0000000001000000
+  tier: 0
+  armour: 4
+  damage: 6
+  armour2: 12
+  damage2: 0

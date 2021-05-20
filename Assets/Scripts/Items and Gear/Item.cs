@@ -8,6 +8,9 @@ public class Item : ScriptableObject
 
     new public string name = "item";
     public Sprite icon = null;
+    public Sprite transmute1 = null;
+    public Sprite transmute2 = null;
+
     public bool defaultItem = false;
     public virtual void setArmour()
     {

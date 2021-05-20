@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Equip", menuName = "Inventory/Gear")]
 public class Gear : Item
 {
+    public gearTier tier;
+
     private int defaultArmour;
     private int defaultDamage;
 
@@ -41,14 +43,37 @@ public class Gear : Item
 
 }
 
+public enum gearTier
+{
+    tier1, tier2, tier3, tier4, tier5
+}
+
 [System.Serializable]
 public class ItemStack
 {
+    public gearTier tier;
+
     public Item baseItem;
 
     public bool defaultItem;
 
     public itemType overrideType;
+
+    public Sprite GetSprite()
+    {
+        if (overrideType == itemType.Null)
+        {
+            return baseItem.icon;
+        }
+        else if (overrideType == baseItem.itemTypes[0])
+        {
+            return baseItem.transmute1;
+        }
+        else
+        {
+            return baseItem.transmute2;
+        }
+    }
 
     public ItemStack()
     {
@@ -102,5 +127,10 @@ public class ItemStack
         }
 
         return baseItem.itemTypes[0];
+    }
+
+    public float GetTierMultiplier()
+    {
+        return (1.0f + ((int)tier * 0.50f));
     }
 }

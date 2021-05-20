@@ -20,18 +20,18 @@ public class PlayerStats : CharacterStats
                 Gear g = newGear.baseItem as Gear;
                 if (newGear.overrideType == newGear.GetItemTypes()[0])
                 {
-                    armour.addValue(g.armour);
-                    damage.addValue(g.damage);
+                    armour.addValue(Mathf.RoundToInt(((float)g.armour) * newGear.GetTierMultiplier()));
+                    damage.addValue(Mathf.RoundToInt(((float)g.damage) * newGear.GetTierMultiplier()));
                 }
                 else if (newGear.overrideType == itemType.Null)
                 {
-                    armour.addValue(g.armour);
-                    damage.addValue(g.damage);
+                    armour.addValue(Mathf.RoundToInt(((float)g.armour) * newGear.GetTierMultiplier()));
+                    damage.addValue(Mathf.RoundToInt(((float)g.damage) * newGear.GetTierMultiplier()));
                 }
                 else
                 {
-                    armour.addValue(g.armour2);
-                    damage.addValue(g.damage2);
+                    armour.addValue(Mathf.RoundToInt(((float)g.armour2) * newGear.GetTierMultiplier()));
+                    damage.addValue(Mathf.RoundToInt(((float)g.damage2) * newGear.GetTierMultiplier()));
                 }
             }
         }
@@ -43,18 +43,18 @@ public class PlayerStats : CharacterStats
                 Gear gg = oldGear.baseItem as Gear;
                 if (oldGear.overrideType == oldGear.GetItemTypes()[0])
                 {
-                    armour.removeValue(gg.armour);
-                    damage.removeValue(gg.damage);
+                    armour.removeValue(Mathf.RoundToInt(((float)gg.armour) * oldGear.GetTierMultiplier()));
+                    damage.removeValue(Mathf.RoundToInt(((float)gg.damage) * oldGear.GetTierMultiplier()));
                 }
                 else if (oldGear.overrideType == itemType.Null)
                 {
-                    armour.removeValue(gg.armour);
-                    damage.removeValue(gg.damage);
+                    armour.removeValue(Mathf.RoundToInt(((float)gg.armour) * oldGear.GetTierMultiplier()));
+                    damage.removeValue(Mathf.RoundToInt(((float)gg.damage) * oldGear.GetTierMultiplier()));
                 }
                 else
                 {
-                    armour.removeValue(gg.armour2);
-                    damage.removeValue(gg.damage2);
+                    armour.removeValue(Mathf.RoundToInt(((float)gg.armour2) * oldGear.GetTierMultiplier()));
+                    damage.removeValue(Mathf.RoundToInt(((float)gg.damage2) * oldGear.GetTierMultiplier()));
                 }
             }
         }

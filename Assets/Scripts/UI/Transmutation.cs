@@ -161,6 +161,16 @@ public class Transmutation : MonoBehaviour
 
         lastTransmuted.overrideType = lastTransmuted.GetItemTypes()[_choice-1];
 
+         /* edits base item
+        if (lastTransmuted.overrideType == lastTransmuted.GetItemTypes()[0])
+        {
+            lastTransmuted.baseItem.icon = lastTransmuted.baseItem.transmute1;
+        }
+        else if (lastTransmuted.overrideType == lastTransmuted.GetItemTypes()[1])
+        {
+            lastTransmuted.baseItem.icon = lastTransmuted.baseItem.transmute2;
+        } */
+
         #region
         //redundant
         /*if (choice == 2)
