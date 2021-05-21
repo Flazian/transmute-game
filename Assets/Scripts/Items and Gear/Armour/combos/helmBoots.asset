@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c13ae71658abc47be37762ff2f79c6, type: 3}
   m_Name: helmBoots
   m_EditorClassIdentifier: 
-  name: item
+  name: Morphing Steel
   icon: {fileID: 0}
   transmute1: {fileID: 21300000, guid: ffbd15f634757b24fa5ca031dd4965a8, type: 3}
   transmute2: {fileID: 21300000, guid: c38efd0212184664db541c3d60712299, type: 3}

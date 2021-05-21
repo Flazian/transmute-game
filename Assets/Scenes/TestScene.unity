@@ -1521,6 +1521,7 @@ GameObject:
   - component: {fileID: 298576669}
   - component: {fileID: 298576675}
   - component: {fileID: 298576674}
+  - component: {fileID: 298576676}
   m_Layer: 9
   m_Name: Enemy
   m_TagString: Untagged
@@ -1643,6 +1644,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpRadius: 3
   interactTransform: {fileID: 298576673}
+--- !u!114 &298576676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 298576668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aff0ba512c62cb46bc21aa5f89b0fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &327652361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2988,7 +3001,7 @@ MonoBehaviour:
   interactTransform: {fileID: 927332273}
   item:
     tier: 0
-    baseItem: {fileID: 11400000, guid: 81e73d799ecb48949b57f12126ce3821, type: 2}
+    baseItem: {fileID: 11400000, guid: b2171bf778b47974380f7de504663ff0, type: 2}
     defaultItem: 0
     overrideType: 10
 --- !u!23 &927332271
@@ -3712,6 +3725,7 @@ GameObject:
   - component: {fileID: 1206215855}
   - component: {fileID: 1206215854}
   - component: {fileID: 1206215856}
+  - component: {fileID: 1206215857}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -3898,6 +3912,18 @@ MonoBehaviour:
   armour:
     baseValue: 0
     modifiers: 
+--- !u!114 &1206215857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206215848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8aff0ba512c62cb46bc21aa5f89b0fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &1214376011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5707076460489155357, guid: 1d7cadda276737f48a59846285629a80,

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23c13ae71658abc47be37762ff2f79c6, type: 3}
   m_Name: helmRing
   m_EditorClassIdentifier: 
-  name: item
+  name: Morphing Gem
   icon: {fileID: 21300000, guid: f2ab5f69bc5571a4a916318eefb278ed, type: 3}
   transmute1: {fileID: 21300000, guid: ffbd15f634757b24fa5ca031dd4965a8, type: 3}
   transmute2: {fileID: 21300000, guid: c37bc70cd9b60c746ac10fe6091632f0, type: 3}

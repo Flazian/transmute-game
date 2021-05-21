@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: helmLegs
   m_EditorClassIdentifier: 
   name: Morphing Steel
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: dc71c90cd2cc39144b85a5e70a9fd703, type: 3}
   transmute1: {fileID: 21300000, guid: ffbd15f634757b24fa5ca031dd4965a8, type: 3}
   transmute2: {fileID: 21300000, guid: 0ad0825c83a4ed24499ba541bb95519a, type: 3}
   defaultItem: 0
