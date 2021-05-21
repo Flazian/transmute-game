@@ -16,9 +16,11 @@ public class CharacterStats : MonoBehaviour
 
     public Stat damage;
     public Stat armour; // diminishing returns implement later 
+    public Stat attackSpeed;
 
     private void Awake()
     {
+        attackSpeed.setBaseValue(1);
         maxHealth.setBaseValue(100);
         currentHealth = maxHealth.GetValue();
         testDmg.Enable();
@@ -83,6 +85,7 @@ public class CharacterStats : MonoBehaviour
     {
         //kill player or character
         //overwrite
+        //Destroy(this);
         Debug.Log(transform.name + " died.");
     }
 }
