@@ -13,6 +13,7 @@ public class Inventory : MonoBehaviour
             Debug.LogWarning("More than one inventory");
             return;
         }
+
         instance = this;
     }
 

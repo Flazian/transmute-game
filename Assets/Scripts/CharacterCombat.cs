@@ -6,6 +6,11 @@ using UnityEngine;
 public class CharacterCombat : MonoBehaviour
 {
     private float attackCooldown = 0f;
+    public float attackDelay = 0.6f;
+    //delay for animations 
+
+    public event System.Action OnAttack;
+    //for anim
 
     private CharacterStats myStats;
 
@@ -23,11 +28,23 @@ public class CharacterCombat : MonoBehaviour
     {
         if (attackCooldown <= 0f)
         {
-            targetStats.takeDmg(myStats.damage.GetValue());
+            StartCoroutine(damageDelay(targetStats, attackDelay));
+
+            if (OnAttack != null)
+            {
+                OnAttack();
+            }
 
             //rework attck speed & cooldown
             attackCooldown = 1f / myStats.attackSpeed.GetValue();
         }
+    }
+
+    IEnumerator damageDelay (CharacterStats stats, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        stats.takeDmg(myStats.damage.GetValue());
     }
 
 }

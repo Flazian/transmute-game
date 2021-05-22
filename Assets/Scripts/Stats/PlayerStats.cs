@@ -60,4 +60,11 @@ public class PlayerStats : CharacterStats
         }
     }
 
+    public override void death()
+    {
+        base.death();
+        PlayerManager.instance.playerDeath();
+        //Application.Quit();
+    }
+
 }

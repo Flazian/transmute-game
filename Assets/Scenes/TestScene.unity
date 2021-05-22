@@ -1625,7 +1625,7 @@ MonoBehaviour:
     baseValue: 50
     modifiers: 
   damage:
-    baseValue: 1
+    baseValue: 15
     modifiers: 
   armour:
     baseValue: 0
@@ -1659,6 +1659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aff0ba512c62cb46bc21aa5f89b0fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDelay: 0.6
 --- !u!1 &327652361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3930,6 +3931,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8aff0ba512c62cb46bc21aa5f89b0fb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackDelay: 0.6
 --- !u!224 &1214376011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5707076460489155357, guid: 1d7cadda276737f48a59846285629a80,
