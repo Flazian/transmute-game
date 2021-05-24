@@ -45,6 +45,7 @@ public class LevelGeneration : MonoBehaviour
                 if (roomMap[i,j] == 1)
                 {
                     RoomContainer room = Instantiate(roomPrefab).GetComponent<RoomContainer>();
+                    room.transform.SetParent(transform);
                     room.transform.position = new Vector3(i * gutter, 0, j * gutter);
 
                     room.index = new Vector2Int(i, j);
@@ -67,6 +68,8 @@ public class LevelGeneration : MonoBehaviour
                 }
             }
         }
+
+        FindObjectOfType<NavMeshBaker>().Build();
     }
 
     public bool AddRoom(Vector2Int _position, int _type)
@@ -148,6 +151,7 @@ public class LevelGeneration : MonoBehaviour
         if (_room.neighbours[1])
         {
             GameObject corridor = Instantiate(verticalCorridor);
+            corridor.transform.SetParent(transform);
             //corridor.transform.position = new Vector3((_room.index.y * gutter) + ((float)gutter / 2), 0, _room.index.x * gutter);
             corridor.transform.position = new Vector3(_room.index.x * gutter, 0, (_room.index.y * gutter) + ((float)gutter / 2));
         }
@@ -155,6 +159,7 @@ public class LevelGeneration : MonoBehaviour
         if (_room.neighbours[3])
         {
             GameObject corridor = Instantiate(horizontalCorridor);
+            corridor.transform.SetParent(transform);
             //corridor.transform.position = new Vector3((_room.index.y * gutter) + ((float)gutter / 2), 0, _room.index.x * gutter);
             corridor.transform.position = new Vector3((_room.index.x * gutter) + ((float)gutter / 2), 0, _room.index.y * gutter);
         }
